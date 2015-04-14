@@ -1,15 +1,17 @@
 // All Sass tools and helpers.
 @import "bourbon/_bourbon";
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
 body {
 	background: whitesmoke;
-}
+	font-family: 'Raleway', sans-serif;}
 
 .page {
 	width: 960px;
-	margin: 20px auto;
+	margin: 100px auto;
 	background: white;
-	border: 3px solid black;
+	border-top: 3px solid black;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
 }
 
 .header {
@@ -20,7 +22,6 @@ body {
 .logo {
 	border-right: 3px solid black;
 	padding: 10px;
-
 }
 
 .banner {
@@ -36,9 +37,11 @@ body {
 
 .content {
 	padding: 30px 20px 20px;
+	border-bottom: 3px solid black;
 
 }
 
 .answer {
 	color: #3072d1;
+	font-weight: 700;
 }
