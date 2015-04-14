@@ -23,9 +23,8 @@
 		</div>
 	</div>
 
-	<div class="words">
-		<form name="myForm" novalidate>
-
+	<div class="words" ng-show="!myForm.$valid && !myForm.$submitted">
+		<form name="myForm" novalidate ng-submit="submitForm()">
 			<div class="row">
 
 				<div class="large-6 columns">
@@ -114,7 +113,7 @@
 
 	</div>
 
-	<div class="content">
+	<div class="content" ng-show="myForm.$valid && myForm.$submitted">
 		<p><span class="answer">{{data.name}}</span> was a {{data.jobTitle}} who loved technology. Although
 			{{gender.pronoun}} loved parts of
 			{{gender.possessive}} job, {{gender.pronoun}}

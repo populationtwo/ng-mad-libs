@@ -5,6 +5,11 @@ angular.module('ngMadLibs', [])
 			pronoun: 'she',
 			possessive: 'her'
 		};
+
+		$scope.submitForm = function(){
+			console.log($scope.data);
+			console.log($scope.myForm);
+		}
 	})
 
 
