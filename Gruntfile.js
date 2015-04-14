@@ -10,19 +10,19 @@ module.exports = function (grunt) {
 
 		concat: {
 			dist: {
-				src : ['app/assets/js/src/*.js'],
-				dest: 'app/assets/js/build/production.js'
+				src : ['assets/js/src/*.js'],
+				dest: 'assets/js/build/production.js'
 			}
 		},
 
 		jshint: {
-			all: ['app/assets/js/src/*.js']
+			all: ['assets/js/src/*.js']
 		},
 
 		uglify: {
 			build: {
-				src : 'app/assets/js/build/production.js',
-				dest: 'app/assets/js/build/production.min.js'
+				src : 'assets/js/build/production.js',
+				dest: 'assets/js/build/production.min.js'
 			}
 		},
 
@@ -33,9 +33,9 @@ module.exports = function (grunt) {
 				},
 				files  : [{
 					expand: true,
-					cwd   : 'app/assets/scss/',
+					cwd   : 'assets/scss/',
 					src   : ['*.scss'],
-					dest  : 'app/assets/css/',
+					dest  : 'assets/css/',
 					ext   : '.css'
 				}]
 			}
@@ -43,14 +43,14 @@ module.exports = function (grunt) {
 
 		watch: {
 			css    : {
-				files  : ['app/assets/scss/**/*.scss', 'app/assets/scss/*.scss'],
+				files  : ['assets/scss/**/*.scss', 'assets/scss/*.scss'],
 				tasks  : ['sass'],
 				options: {
 					debounceDelay: 500
 				}
 			},
 			scripts: {
-				files  : ['app/assets/js/src/*.js'],
+				files  : ['assets/js/src/*.js'],
 				tasks  : ['concat', 'uglify', 'jshint'],
 				options: {
 					spawn: false
