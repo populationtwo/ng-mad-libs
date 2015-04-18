@@ -1,4 +1,4 @@
-angular.module('ngMadLibs', [])
+angular.module('ngMadLibs', ['ngAnimate'])
 	.controller('formController', function($scope){
 		$scope.formData = {},
 		$scope.gender = {
